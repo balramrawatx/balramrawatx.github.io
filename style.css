@@ -194,3 +194,47 @@ h1 { font-size: clamp(3.4rem, 6.8vw, 5.6rem); letter-spacing: -.075em; line-heig
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Coding Profiles */
+.coding-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.coding-card {
+  padding: 26px;
+  transition: transform 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.coding-card:hover {
+  transform: translateY(-5px);
+  border-color: #a78bfa;
+}
+
+.coding-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.coding-card p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.coding-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #c4b5fd;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .coding-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
